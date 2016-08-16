@@ -7,7 +7,16 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-hot-code-push-local-dev-addon": {
+            "PACKAGE_NAME": "io.clef.native.cordova.sample"
+        },
+        "cordova-hot-code-push-plugin": {
+            "PACKAGE_NAME": "io.clef.native.cordova.sample"
+        },
         "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.clef.native.cordova.sample"
+        },
+        "io.clef.native": {
             "PACKAGE_NAME": "io.clef.native.cordova.sample"
         }
     },
