@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "io.clef.native.cordova.sample"
+        },
+        "io.clef.sdk": {
+            "PACKAGE_NAME": "io.clef.native.cordova.sample"
         }
     },
     "dependent_plugins": {}

@@ -8,7 +8,10 @@
     },
     "installed_plugins": {
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "io.clef.native.cordova.sample"
+            "PACKAGE_NAME": "io.clef.sdk.cordova.sample"
+        },
+        "io.clef.sdk": {
+            "PACKAGE_NAME": "io.clef.sdk.cordova.sample"
         }
     },
     "dependent_plugins": {}

@@ -44,7 +44,11 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+        var pro = window.clef.init('app_id')
+
+        pro
+          .then(() => { alert('yay') }, (err) => { alert(err) })
+        ;
     }
 };
 

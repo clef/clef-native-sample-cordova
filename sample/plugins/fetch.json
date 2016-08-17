@@ -6,5 +6,13 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "io.clef.sdk": {
+        "source": {
+            "type": "local",
+            "path": "../../native-sdk-cordova"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
