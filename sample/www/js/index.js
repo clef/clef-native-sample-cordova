@@ -44,10 +44,23 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        var pro = window.clef.init('app_id')
+        var pro = window.clef.init('app_id');
 
         pro
           .then(() => { alert('yay') }, (err) => { alert(err) })
+        ;
+
+        var pro1 = window.clef.register();
+
+        pro1
+          .then((id) => { alert(id) }, (err) => { alert(err) })
+        ;
+
+        var pro2 = window.clef.signIn();
+
+        pro2
+          .then((loginEntrypointId) => { alert(loginEntrypointId) },
+                (err) => { alert(err) })
         ;
     }
 };
