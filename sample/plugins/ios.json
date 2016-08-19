@@ -7,18 +7,22 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-hot-code-push-local-dev-addon": {
+        "cordova-plugin-fetch": {
             "PACKAGE_NAME": "io.clef.native.cordova.sample"
         },
-        "cordova-hot-code-push-plugin": {
+        "cordova-plugin-test-framework": {
             "PACKAGE_NAME": "io.clef.native.cordova.sample"
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "io.clef.native.cordova.sample"
         },
-        "io.clef.native": {
+        "io.clef.sdk": {
             "PACKAGE_NAME": "io.clef.native.cordova.sample"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-add-swift-support": {
+            "PACKAGE_NAME": "io.clef.native.cordova.sample"
+        }
+    }
 }

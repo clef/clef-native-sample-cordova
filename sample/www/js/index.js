@@ -45,6 +45,25 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+        app.runClef();
+    },
+    runClef: function() {
+        clef.register().then(function(result) {
+            console.log(result);
+            return cordovaFetch("https://clef-native-sample.staging.getclef.com/clef/registration", {
+                method: 'POST',
+                body: "authentication_token=12345&public_key_id=" + result
+            });
+        }).then(function(response) {
+            alert(response);
+            return JSON.parse(response.statusText);
+        }).then(function(data) {
+            var accountID = data["clef_id"];
+            console.log(accountID);
+            alert("accountID: " + accountID);
+        }).catch(function(err) {
+            alert(err);
+        });
     }
 };
 

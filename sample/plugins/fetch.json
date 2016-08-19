@@ -7,26 +7,52 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-hot-code-push-plugin": {
+    "cordova-plugin-test-framework": {
         "source": {
-            "type": "registry",
-            "id": "cordova-hot-code-push-plugin"
+            "type": "git",
+            "url": "http://git-wip-us.apache.org/repos/asf/cordova-plugin-test-framework.git",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-hot-code-push-local-dev-addon": {
+    "cordova-plugin-add-swift-support": {
         "source": {
             "type": "registry",
-            "id": "cordova-hot-code-push-local-dev-addon"
+            "id": "cordova-plugin-add-swift-support"
         },
-        "is_top_level": true,
+        "is_top_level": false,
         "variables": {}
     },
-    "io.clef.native": {
+    "io.clef.sdk": {
         "source": {
             "type": "local",
             "path": "../../clef-native-sdk-cordova"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-file": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-file"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-fetch": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/aporat/cordova-plugin-fetch.git",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
