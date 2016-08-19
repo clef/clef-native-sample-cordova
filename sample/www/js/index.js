@@ -44,24 +44,26 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        var pro = window.clef.init('app_id');
-
-        pro
-          .then(() => { alert('yay') }, (err) => { alert(err) })
-        ;
-
-        var pro1 = window.clef.register();
-
-        pro1
-          .then((id) => { alert(id) }, (err) => { alert(err) })
-        ;
-
-        var pro2 = window.clef.signIn();
-
-        pro2
-          .then((loginEntrypointId) => { alert(loginEntrypointId) },
-                (err) => { alert(err) })
-        ;
+        console.log('Received Event: ' + id);
+        app.runClef();
+    },
+    runClef: function() {
+        clef.register().then(function(result) {
+            console.log(result);
+            return cordovaFetch("https://clef-native-sample.staging.getclef.com/clef/registration", {
+                method: 'POST',
+                body: "authentication_token=12345&public_key_id=" + result
+            });
+        }).then(function(response) {
+            alert(response);
+            return JSON.parse(response.statusText);
+        }).then(function(data) {
+            var accountID = data["clef_id"];
+            console.log(accountID);
+            alert("accountID: " + accountID);
+        }).catch(function(err) {
+            alert(err);
+        });
     }
 };
 
