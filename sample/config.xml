@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.clef.sdk.cordova.sample" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Clef Native Sample</name>
+    <name>ClefCordovaSample</name>
     <description>
       A sample application that demonstrates the use of Clef Native in Cordova.
     </description>
@@ -25,4 +25,7 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <plugin name="io.clef.sdk" spec="../../clef-native-sdk-cordova" />
+    <plugin name="cordova-plugin-fetch" spec="https://github.com/aporat/cordova-plugin-fetch.git" />
+    <engine name="ios" spec="~4.2.0" />
 </widget>
