@@ -9,9 +9,8 @@
     },
     "cordova-plugin-test-framework": {
         "source": {
-            "type": "git",
-            "url": "http://git-wip-us.apache.org/repos/asf/cordova-plugin-test-framework.git",
-            "subdir": "."
+            "type": "registry",
+            "id": "cordova-plugin-test-framework"
         },
         "is_top_level": true,
         "variables": {}
@@ -22,14 +21,6 @@
             "id": "cordova-plugin-add-swift-support"
         },
         "is_top_level": false,
-        "variables": {}
-    },
-    "io.clef.sdk": {
-        "source": {
-            "type": "local",
-            "path": "../../clef-native-sdk-cordova"
-        },
-        "is_top_level": true,
         "variables": {}
     },
     "cordova-plugin-file": {
@@ -53,6 +44,14 @@
             "type": "git",
             "url": "https://github.com/aporat/cordova-plugin-fetch.git",
             "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "io.clef.sdk": {
+        "source": {
+            "type": "local",
+            "path": "../../native-sdk-cordova"
         },
         "is_top_level": true,
         "variables": {}

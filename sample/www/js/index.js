@@ -17,6 +17,7 @@
  * under the License.
  */
 var app = {
+    ID: "00dd5914f13c9ba6baf42431753f0bf0",
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -47,23 +48,44 @@ var app = {
         console.log('Received Event: ' + id);
         app.runClef();
     },
-    runClef: function() {
-        clef.register().then(function(result) {
-            console.log(result);
-            return cordovaFetch("https://clef-native-sample.staging.getclef.com/clef/registration", {
-                method: 'POST',
-                body: "authentication_token=12345&public_key_id=" + result
-            });
-        }).then(function(response) {
-            alert(response);
-            return JSON.parse(response.statusText);
-        }).then(function(data) {
-            var accountID = data["clef_id"];
-            console.log(accountID);
-            alert("accountID: " + accountID);
-        }).catch(function(err) {
-            alert(err);
+    finishRegistration: function(result) {
+        console.log(result);
+        return cordovaFetch("https://clef-native-sample.staging.getclef.com/clef/registration", {
+            method: 'POST',
+            body: "authentication_token=12345&public_key_id=" + result
         });
+    },
+    parseResult: function(response) {
+        var json = JSON.parse(response.statusText);
+        var accountID = json["clef_id"];
+        alert("accountID: " + accountID);
+    },
+    runClef: function() {
+        clef.configure(app.ID)
+          .then(function () { 
+            app.setHeaderText("Registering...")
+            return clef.register()
+          })
+          .then(function (result) {
+            app.setHeaderText("Finishing Client Registration...")
+            return app.finishRegistration(result)
+          })
+          .then(function (response) {
+            app.setHeaderText("Parsing Registration...")
+            return app.parseResult(response)
+          })
+          .then(function () {
+            app.setHeaderText("Signing In...")
+            return clef.signIn()
+          })
+          .then(function() {
+            app.setHeaderText("Welcome to Clef Native!")
+          })
+          .catch(function(err) { alert(err); });
+    },
+    setHeaderText: function(text) {
+        var header = document.getElementById('titleHeader');
+        header.innerText = text;
     }
 };
 
