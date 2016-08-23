@@ -9,9 +9,8 @@
     },
     "cordova-plugin-test-framework": {
         "source": {
-            "type": "git",
-            "url": "http://git-wip-us.apache.org/repos/asf/cordova-plugin-test-framework.git",
-            "subdir": "."
+            "type": "registry",
+            "id": "cordova-plugin-test-framework"
         },
         "is_top_level": true,
         "variables": {}
