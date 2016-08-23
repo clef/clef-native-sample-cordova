@@ -25,7 +25,7 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <plugin name="cordova-plugin-fetch" spec="https://github.com/landakram/cordova-plugin-fetch.git" />
     <plugin name="io.clef.sdk" spec="../../clef-native-sdk-cordova" />
-    <plugin name="cordova-plugin-fetch" spec="https://github.com/aporat/cordova-plugin-fetch.git" />
-    <engine name="ios" spec="~4.2.0" />
+    <engine name="ios" spec="~4.2.1" />
 </widget>
