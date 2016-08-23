@@ -19,13 +19,12 @@
     <platform name="android">
         <allow-intent href="market:*" />
         <preference name="android-minSdkVersion" value="15" />
-        <preference name="android-targetSdkVersion" value="23" />
+        <preference name="android-targetSdkVersion" value="24" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
     <plugin name="cordova-plugin-fetch" spec="https://github.com/landakram/cordova-plugin-fetch.git" />
-    <plugin name="io.clef.sdk" spec="../../clef-native-sdk-cordova" />
     <engine name="ios" spec="~4.2.1" />
 </widget>
