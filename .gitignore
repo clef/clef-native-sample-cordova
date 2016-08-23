@@ -1,5 +1,5 @@
-sample/plugins/*
-sample/platforms/*
+plugins/*
+platforms/*
 
 # Android 
 # built application files
@@ -14,3 +14,5 @@ sample/platforms/*
 
 # iOS
 **/build/*
+
+.DS_Store
