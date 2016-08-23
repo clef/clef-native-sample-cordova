@@ -16,22 +16,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-add-swift-support": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-add-swift-support"
-        },
-        "is_top_level": false,
-        "variables": {}
-    },
-    "io.clef.sdk": {
-        "source": {
-            "type": "local",
-            "path": "../../clef-native-sdk-cordova"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-file": {
         "source": {
             "type": "registry",
@@ -51,8 +35,16 @@
     "cordova-plugin-fetch": {
         "source": {
             "type": "git",
-            "url": "https://github.com/aporat/cordova-plugin-fetch.git",
+            "url": "https://github.com/landakram/cordova-plugin-fetch.git",
             "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "io.clef.sdk": {
+        "source": {
+            "type": "local",
+            "path": "../../clef-native-sdk-cordova"
         },
         "is_top_level": true,
         "variables": {}
