@@ -5,6 +5,9 @@ help:
 	@echo "clef-tests -- Add the Clef Native plugin's tests"
 	@echo "clean-clef -- Remove all Clef Native related plugins"
 
+android:
+	cordova platform add android --save
+
 ios:
 	cordova platform add ios --save
 
