@@ -16,7 +16,7 @@ You'll also need to install **Xcode** (>= 7.3) and **Android Studio** and the An
 android update sdk --no-ui --all --filter tools,platform-tools,android-24,build-tools-24.0.2,extra-android-m2repository
 ```
 
-*Note:* if the `android` command is not available, you may need to add the Android SDK tools directory to your shell's `$PATH`. The default location for these tools is `/Users/<USER>/Library/Android/sdk/tools/`. You can add them to your $PATH by typing `export PATH=/Users/<USER>/Library/Android/sdk/tools/android:$PATH` on the command line.
+*Note:* if the `android` command is not available, you may need to add the Android SDK tools directory to your shell's `$PATH`. The default location for these tools is `/Users/<USER>/Library/Android/sdk/tools/`. You can add them to your $PATH by typing `export PATH=/Users/<USER>/Library/Android/sdk/tools:$PATH` on the command line. You can add this line to your `~/.profile`, which will load it whenever you open up a new shell.
 
 Finally, let's add the iOS and Android platforms to the cordova project: 
 
