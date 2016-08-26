@@ -44,3 +44,9 @@ or
 ```
 cordova run android --device
 ```
+
+## Updating plugins
+
+If you want to update plugins in bulk, I recommend
+[cordova-check-plugins](https://github.com/dpa99c/cordova-check-plugins). You
+can interactive step through plugin upgrades or upgrade them all automatically.
