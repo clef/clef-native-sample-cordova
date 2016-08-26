@@ -27,4 +27,6 @@
     </platform>
     <plugin name="cordova-plugin-fetch" spec="https://github.com/landakram/cordova-plugin-fetch.git" />
     <engine name="ios" spec="~4.2.1" />
+    <engine name="android" spec="~5.2.2" />
+    <plugin name="cordova-plugin-clef" spec="@clef/cordova-plugin-clef@~0.0.1" />
 </widget>

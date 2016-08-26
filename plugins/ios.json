@@ -7,16 +7,13 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-fetch": {
-            "PACKAGE_NAME": "io.clef.sdk.cordova.sample"
-        },
-        "cordova-plugin-test-framework": {
-            "PACKAGE_NAME": "io.clef.sdk.cordova.sample"
-        },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "io.clef.sdk.cordova.sample"
         },
-        "io.clef.sdk": {
+        "cordova-plugin-fetch": {
+            "PACKAGE_NAME": "io.clef.sdk.cordova.sample"
+        },
+        "cordova-plugin-clef": {
             "PACKAGE_NAME": "io.clef.sdk.cordova.sample"
         }
     },

@@ -7,30 +7,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-test-framework": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-test-framework"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-file": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-file"
-        },
-        "is_top_level": false,
-        "variables": {}
-    },
-    "cordova-plugin-compat": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-compat"
-        },
-        "is_top_level": false,
-        "variables": {}
-    },
     "cordova-plugin-fetch": {
         "source": {
             "type": "git",
@@ -40,10 +16,10 @@
         "is_top_level": true,
         "variables": {}
     },
-    "io.clef.sdk": {
+    "cordova-plugin-clef": {
         "source": {
-            "type": "local",
-            "path": "../../clef-native-sdk-cordova"
+            "type": "registry",
+            "id": "@clef/cordova-plugin-clef@~0.0.3"
         },
         "is_top_level": true,
         "variables": {}
