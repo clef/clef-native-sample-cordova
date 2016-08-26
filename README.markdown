@@ -1,16 +1,46 @@
 # Sample Cordova Application for Clef Native
 
-This project demonstrates how Clef Native's Cordova extension would work using
-the accompanying extension.
+This project provides a barebone Cordova app and shows simple usage of the Clef Native Cordova plugin.
 
-> Since we haven't released the extension to NPM as of yet, you have to have the
-> SDK plugin checked out at the same directory that this repository is checked
-> out at so that they're immediate siblings in the file tree.
+## Quick start for Cordova
 
-## Quick Start
+This project supports the iOS and Andoid cordova platforms. We've been using a Makefile to do less typing when setting up and tearing down the environment, but if you look in the Makefile, you'll see that it is a very thin wrapper over cordova commands. To get started with the project, you'll first need to install Cordova. From the command line, run:
 
 ```
-cd sample
-cordova run ios --emulator     # For iOS
-cordova run android --emulator # For Android
+sudo npm install -g cordova
+```
+
+You'll also need to install **Xcode** (>= 7.3) and **Android Studio** and the Android SDK (comes with Android Studio). You'll also need to download some additional repositories from Android. From the command line, run:
+
+```
+android update sdk --no-ui --all --filter tools,platform-tools,android-24,build-tools-24.0.2,extra-android-m2repository
+```
+
+*Note:* if the `android` command is not available, you may need to add the Android SDK tools directory to your shell's `$PATH`. The default location for these tools is `/Users/<USER>/Library/Android/sdk/tools/`. You can add them to your $PATH by typing `export PATH=/Users/<USER>/Library/Android/sdk/tools/android:$PATH` on the command line.
+
+Finally, let's add the iOS and Android platforms to the cordova project: 
+
+```
+cordova platform add ios --save
+cordova platform add android --save
+```
+
+## Installing the Clef Native SDK
+
+Now, we'll add the Clef Native Cordova plugin, which is hosted on npm:
+
+```
+cordova plugin add @clef/cordova-plugin-clef --save
+```
+
+The plugin installation may take a moment. Once it's complete, we should be able to compile and run both iOS and Android: 
+
+```
+cordova run ios --emulator
+```
+
+or 
+
+```
+cordova run android --device
 ```
