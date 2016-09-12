@@ -50,24 +50,35 @@ var app = {
     },
     finishRegistration: function(result) {
         console.log(result);
-        return cordovaFetch("https://clef-native-sample.getclef.com/clef/registration", {
+        return cordovaFetch("https://clef-native-sample.staging.getclef.com/clef/registration", {
             method: 'POST',
             body: "authentication_token=12345&public_key_id=" + result
         });
     },
     parseResult: function(response) {
         var json = JSON.parse(response.statusText);
+        console.log(response.statusText);
         var accountID = json["clef_id"];
         alert("accountID: " + accountID);
     },
     runClef: function() {
         clef.configure(app.ID)
           .then(function () { 
+            return clef.isRegistered()
+              .then(function(result) {
+                app.setHeaderText("Wiping options...")
+                return clef.unregister();
+              }).catch(function(result) {
+                app.setHeaderText("Prepping for Registration..")
+                return true;
+              })
+          })
+          .then(function (result) {
             app.setHeaderText("Registering...")
             return clef.register()
           })
           .then(function (result) {
-            app.setHeaderText("Finishing Client Registration...")
+            app.setHeaderText("Finishing Registration...")
             return app.finishRegistration(result)
           })
           .then(function (response) {
