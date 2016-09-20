@@ -50,7 +50,7 @@ var app = {
     },
     finishRegistration: function(result) {
         console.log(result);
-        return cordovaFetch("https://clef-native-sample.staging.getclef.com/clef/registration", {
+        return cordovaFetch("https://clef-native-sample.getclef.com/clef/registration", {
             method: 'POST',
             body: "authentication_token=12345&public_key_id=" + result
         });
